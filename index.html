@@ -3,68 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTESTORM | 2026 EDITION</title>
+    <title>Amazon.at: Bytestorm Esports Casual 2026 Edition</title>
     <style>
-        :root { --bg: #000; --text: #fff; --sub: #666; }
-        body, html { margin: 0; padding: 0; height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', 'Segoe UI', sans-serif; overflow: hidden; }
-        
-        .main { display: flex; height: 100vh; width: 100%; }
-
-        /* Left side: The Visuals */
-        .visual { flex: 1.2; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, #111 0%, #000 100%); position: relative; }
-        .visual img { width: 80%; max-width: 700px; filter: drop-shadow(0 0 40px rgba(255,255,255,0.1)); }
-        
-        /* Right side: The Info */
-        .content { flex: 0.8; padding: 80px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #1a1a1a; }
-        
-        .exclusive { font-size: 0.7rem; letter-spacing: 3px; color: var(--sub); text-transform: uppercase; margin-bottom: 10px; border-left: 2px solid #fff; padding-left: 10px; }
-        h1 { font-size: 4.5rem; font-weight: 900; margin: 0; line-height: 0.85; letter-spacing: -3px; }
-        .edition { font-size: 1.5rem; color: var(--sub); margin-top: 10px; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; }
-
-        .description { margin: 40px 0; font-size: 1.1rem; line-height: 1.6; color: #ccc; max-width: 400px; }
-        
-        /* PayPal Section */
-        #paypal-button-container { margin-top: 30px; width: 100%; max-width: 350px; }
-
-        footer { position: absolute; bottom: 30px; right: 80px; font-size: 0.6rem; color: #222; letter-spacing: 2px; }
-
-        @media (max-width: 1000px) {
-            .main { flex-direction: column; overflow-y: auto; }
-            .visual { height: 60vh; flex: none; }
-            .content { padding: 40px; text-align: center; border-left: none; align-items: center; }
-            h1 { font-size: 3rem; }
+        :root {
+            --amazon-orange: #febd69;
+            --amazon-blue: #232f3e;
+            --bg: #fff;
+            --text: #111;
+            --card: #f3f3f3;
         }
+        
+        /* Dark Mode Switcher */
+        body.dark-mode {
+            --bg: #111;
+            --text: #fff;
+            --card: #222;
+        }
+
+        body { background-color: var(--bg); color: var(--text); font-family: "Amazon Ember", Arial, sans-serif; margin: 0; padding: 0; transition: 0.5s; }
+        
+        header { background-color: var(--amazon-blue); color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
+        .mode-toggle { background: var(--amazon-orange); border: none; padding: 8px 15px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+
+        .container { max-width: 1200px; margin: 20px auto; display: flex; gap: 40px; padding: 20px; }
+
+        /* Left side - Images */
+        .image-gallery { flex: 1; text-align: center; }
+        .main-img { width: 100%; max-width: 500px; border: 1px solid #ddd; padding: 10px; border-radius: 4px; background: white; }
+        
+        /* Right side - Order Details */
+        .order-panel { flex: 1; }
+        .brand-link { color: #007185; text-decoration: none; font-size: 14px; }
+        h1 { font-size: 28px; font-weight: 400; margin: 10px 0; }
+        .rating { color: #ffa41c; font-size: 18px; margin-bottom: 20px; }
+        
+        .divider { height: 1px; background: #ddd; margin: 20px 0; }
+        
+        .price-tag { font-size: 24px; color: #B12704; margin-bottom: 10px; }
+        
+        .members-only-badge { 
+            background-color: #f0f2f2; 
+            border: 1px solid #d5d9d9; 
+            padding: 10px; 
+            border-radius: 8px; 
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        /* PayPal Button Area */
+        .buy-box { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: var(--card); }
+
+        footer { text-align: center; padding: 40px; font-size: 12px; color: #555; border-top: 1px solid #ddd; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-<div class="main">
-    <div class="visual">
-        <img src="mockup.jpg" alt="Bytestorm Esports Casual 2026">
+<header>
+    <div class="nav-logo">BYTESTORM ESPORTS</div>
+    <button class="mode-toggle" onclick="toggleMode()">Switch Dark/White</button>
+</header>
+
+<div class="container">
+    <div class="image-gallery">
+        <img src="mockup.jpg" alt="Bytestorm Shirt" class="main-img" id="mainDisplay">
+        <p style="font-size: 12px; color: #555;">Roll over image to zoom in</p>
     </div>
 
-    <div class="content">
-        <div class="exclusive">Official Team Distribution</div>
-        <h1>BYTESTORM<br>ESPORTS CASUAL</h1>
-        <div class="edition">2026 Edition</div>
+    <div class="order-panel">
+        <a href="#" class="brand-link">Visit the Bytestorm Store</a>
+        <h1>Bytestorm Esports Casual: 2026 Edition (Member Exclusive)</h1>
+        <div class="rating">★★★★★ <span style="color: #007185; font-size: 14px;">(63 ratings)</span></div>
+        
+        <div class="divider"></div>
+        
+        <div class="members-only-badge">
+            <strong>Exclusive Access:</strong> This item is only available to verified Bytestorm Esports Members.
+        </div>
 
-        <p class="description">
-            Tailored for the elite. This limited drop is restricted to active Bytestorm members and verified squad players. 
-        </p>
+        <div class="buy-box">
+            <p><strong>Selection:</strong> Unisex Softstyle T-Shirt</p>
+            <p><strong>Color:</strong> Black / White Print</p>
+            
+            <div id="paypal-container-9LM6KMDFY9Q8W"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=BAALTKL9GAUApna2yQNcUfCXdQzbpBu1V0yXc6c2xkhNIiKrzwSFKvNvPeWIcM5snRi57mD69hS_5b8u8A&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "9LM6KMDFY9Q8W",
+              }).render("#paypal-container-9LM6KMDFY9Q8W")
+            </script>
+        </div>
 
-        <div id="paypal-container-9LM6KMDFY9Q8W"></div>
-        <script src="https://www.paypal.com/sdk/js?client-id=BAALTKL9GAUApna2yQNcUfCXdQzbpBu1V0yXc6c2xkhNIiKrzwSFKvNvPeWIcM5snRi57mD69hS_5b8u8A&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-        <script>
-          paypal.HostedButtons({
-            hostedButtonId: "9LM6KMDFY9Q8W",
-          }).render("#paypal-container-9LM6KMDFY9Q8W")
-        </script>
+        <div class="details" style="margin-top: 20px; font-size: 14px; line-height: 1.5;">
+            <h3>About this item</h3>
+            <ul>
+                <li>Official 2026 Team Gear for Bytestorm members.</li>
+                <li>High-quality softstyle cotton for maximum comfort during long sessions.</li>
+                <li>Custom back printing with "Superplayer" branding.</li>
+                <li>Dispatched and Sold by Bytestorm Austria.</li>
+            </ul>
+        </div>
     </div>
 </div>
 
 <footer>
-    EST. 2026 // BYTESTORM ESPORTS // VIENNA - SALZBURG SQUAD
+    Bytestorm Esports is an independent organization. 2026 &copy;
 </footer>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
 
 </body>
 </html>
