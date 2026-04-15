@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTESTORM | OFFICIAL MERCH</title>
+    <title>BYTESTORM | 2026 EDITION</title>
     <style>
-        :root { --primary: #ffffff; --bg: #050505; --accent: #222; }
-        body { background: var(--bg); color: var(--primary); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
-        header { padding: 60px 20px; text-align: center; border-bottom: 1px solid var(--accent); }
-        .logo-text { font-size: 3rem; font-weight: 900; letter-spacing: 8px; margin: 0; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; }
-        .product-image-container { flex: 1; min-width: 300px; max-width: 500px; }
-        .product-image { width: 100%; border-radius: 15px; box-shadow: 0 0 30px rgba(255,255,255,0.05); }
-        .product-info { flex: 1; min-width: 300px; text-align: left; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .tagline { color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
-        .price { font-size: 2rem; font-weight: bold; margin: 15px 0; color: #fff; }
+        :root { --bg: #000; --text: #fff; --sub: #666; }
+        body, html { margin: 0; padding: 0; height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', 'Segoe UI', sans-serif; overflow: hidden; }
         
-        /* PayPal Button Container Styling */
-        #paypal-container-9LM6KMDFY9Q8W {
-            margin-top: 25px;
-            max-width: 350px;
-        }
+        .main { display: flex; height: 100vh; width: 100%; }
 
-        .details { margin-top: 30px; border-top: 1px solid var(--accent); padding-top: 20px; color: #666; font-size: 0.9rem; line-height: 1.6; }
-        footer { text-align: center; padding: 60px; color: #333; font-size: 0.7rem; letter-spacing: 1px; }
+        /* Left side: The Visuals */
+        .visual { flex: 1.2; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, #111 0%, #000 100%); position: relative; }
+        .visual img { width: 80%; max-width: 700px; filter: drop-shadow(0 0 40px rgba(255,255,255,0.1)); }
+        
+        /* Right side: The Info */
+        .content { flex: 0.8; padding: 80px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #1a1a1a; }
+        
+        .exclusive { font-size: 0.7rem; letter-spacing: 3px; color: var(--sub); text-transform: uppercase; margin-bottom: 10px; border-left: 2px solid #fff; padding-left: 10px; }
+        h1 { font-size: 4.5rem; font-weight: 900; margin: 0; line-height: 0.85; letter-spacing: -3px; }
+        .edition { font-size: 1.5rem; color: var(--sub); margin-top: 10px; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; }
+
+        .description { margin: 40px 0; font-size: 1.1rem; line-height: 1.6; color: #ccc; max-width: 400px; }
+        
+        /* PayPal Section */
+        #paypal-button-container { margin-top: 30px; width: 100%; max-width: 350px; }
+
+        footer { position: absolute; bottom: 30px; right: 80px; font-size: 0.6rem; color: #222; letter-spacing: 2px; }
+
+        @media (max-width: 1000px) {
+            .main { flex-direction: column; overflow-y: auto; }
+            .visual { height: 60vh; flex: none; }
+            .content { padding: 40px; text-align: center; border-left: none; align-items: center; }
+            h1 { font-size: 3rem; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-text">BYTESTORM</div>
-</header>
-
-<div class="container">
-    <div class="product-image-container">
-        <img src="mockup.jpg" alt="Bytestorm Official Jersey" class="product-image">
+<div class="main">
+    <div class="visual">
+        <img src="mockup.jpg" alt="Bytestorm Esports Casual 2026">
     </div>
 
-    <div class="product-info">
-        <div class="tagline">2026 Season // Official Merch</div>
-        <h1>"SUPERPLAYER" CASUAL JERSEY</h1>
-        <p>Premium black finish featuring the Bytestorm Bolt. Custom "TT | Superplayer" back print with iconic number 63.</p>
-        
-        <div class="price">€29.99</div>
+    <div class="content">
+        <div class="exclusive">Official Team Distribution</div>
+        <h1>BYTESTORM<br>ESPORTS CASUAL</h1>
+        <div class="edition">2026 Edition</div>
+
+        <p class="description">
+            Tailored for the elite. This limited drop is restricted to active Bytestorm members and verified squad players. 
+        </p>
 
         <div id="paypal-container-9LM6KMDFY9Q8W"></div>
         <script src="https://www.paypal.com/sdk/js?client-id=BAALTKL9GAUApna2yQNcUfCXdQzbpBu1V0yXc6c2xkhNIiKrzwSFKvNvPeWIcM5snRi57mD69hS_5b8u8A&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
@@ -52,19 +59,11 @@
             hostedButtonId: "9LM6KMDFY9Q8W",
           }).render("#paypal-container-9LM6KMDFY9Q8W")
         </script>
-
-        <div class="details">
-            • 100% Breathable Softstyle Cotton<br>
-            • Official Bytestorm Team Branding<br>
-            • Shipping: Calculated at checkout<br>
-            • <b>Note:</b> Please ensure your shipping address is correct in PayPal.
-        </div>
     </div>
 </div>
 
 <footer>
-    &copy; 2026 BYTESTORM ESPORTS | AUSTRIA <br>
-    POWERED BY PRINTFUL // SECURE PAYPAL CHECKOUT
+    EST. 2026 // BYTESTORM ESPORTS // VIENNA - SALZBURG SQUAD
 </footer>
 
 </body>
